@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <link rel="icon" href="logo1.png" type="image/png">
+    <style>
+        html, body {
+            height: 90%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background-color: #2e7d33; */
+            background-color: #a8e6cf;
+        }
+
+        /* Navbar using your styles */
+        nav {
+            background: #81c784;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 2px 6px rgba(129, 199, 132, 0.5);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #1b5e20;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(27, 94, 32, 0.3);
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: #1b5e20;
+            color: #a8e6cf;
+            text-decoration: underline;
+            box-shadow: 0 4px 8px rgba(27, 94, 32, 0.7);
+            outline: none;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-top: 0px; /* leave space for navbar */
+            box-sizing: border-box;
+        }
+
+        .contact-form {
+            background-color: #a8e6cf;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            width: 450px;
+        }
+
+        .contact-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 5px 0;
+            border: 2px solid #27ae60;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="text"]:hover,
+        .contact-form input[type="email"]:hover,
+        .contact-form textarea:hover {
+            border-color: #1abc9c;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: #16a085;
+            outline: none;
+            box-shadow: 0 0 5px #16a085;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #2ecc71;
+        }
+
+        .contact-form button:active {
+            background-color: #1e8449;
+            transform: scale(0.98);
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            display: none;
+        }
+
+        @media screen and (max-width: 800px) {
+            header {
+                flex-direction: column;
+                font-size: 2rem;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .contact-form {
+                width: 90%;
+            }
+        }
+
+        header {
+            background: #388e3c;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(56, 142, 60, 0.6);
+            text-transform: uppercase;
+        }
+
+        header img {
+            height: 90px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Krishi Sahayak Logo">
+        <span>Krishi Sahayak</span>
+    </header> 
+
+     <nav>
+        <a href="index.html">Home</a>
+        <a href="emerging_tech2.html">Emerging Technologies</a>
+        <a href="resources.html">Resources</a>
+        <a href="success_stories.html">Success Stories</a>
+        
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="content">
+        <div class="contact-form">
+            <h1>CONTACT US</h1>
+            <form id="contactForm" action="https://script.google.com/macros/s/AKfycbwHSLUXZNPTCdTgWxFDt90fmH4aAQyqDwASkiZasORGbjKPb5gEH2H0-j_WGY3mzUdw/exec" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                
+                <input type="email" name="email" id="email" placeholder="Your Gmail" required>
+                <p class="error-message" id="emailError">Please enter a valid email address (e.g., example@gmail.com)</p>
+                
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <!-- Success message -->
+            <p id="submitMessage" style="color:green; display:none; margin-top:10px;">Message sent successfully!</p>
+        </div>
+    </div>
+
+    <script>
+const form = document.getElementById('contactForm');
+const submitMessage = document.getElementById('submitMessage');
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('emailError');
+
+// Email validation
+emailInput.addEventListener('input', () => {
+    const emailValue = emailInput.value;
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+    emailError.style.display = validEmail ? 'none' : 'block';
+});
+
+// AJAX form submission
+form.addEventListener('submit', e => {
+    e.preventDefault(); // Prevent page reload
+
+    const emailValue = emailInput.value;
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+    if (!validEmail) return; // stop submission if email invalid
+
+    const formData = new FormData(form);
+    const searchParams = new URLSearchParams(formData);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: searchParams
+    })
+    .then(response => response.text())
+    .then(data => {
+        submitMessage.style.display = 'block'; // Show success message
+        form.reset(); // Clear the form fields
+        setTimeout(() => submitMessage.style.display = 'none', 5000); // Hide after 5 seconds
+    })
+    .catch(error => {
+        alert('Error submitting form. Please try again.');
+        console.error(error);
+    });
+});
+</script>
+
+    <script>
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        emailInput.addEventListener('input', () => {
+            const emailValue = emailInput.value;
+            const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+            
+            if (!validEmail) {
+                emailError.style.display = 'block';
+            } else {
+                emailError.style.display = 'none';
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const emailValue = emailInput.value;
+            const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+
+            if (!validEmail) {
+                e.preventDefault();
+                emailError.style.display = 'block';
+                emailInput.focus();
+            }
+        });
+    </script>
+
+
+    
+
+</body>
+</html>
