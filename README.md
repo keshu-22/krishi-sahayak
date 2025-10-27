@@ -35,7 +35,10 @@ We had just **8 hours** to make this project from start to finish. Despite the t
 
 ## 🧠 Key Takeaway  
 This project represents my **first step into web development**, showing my ability to design and structure the **frontend** of a real-world concept.  
-It reflects my **design thinking**, problem-solving under pressure, and eagerness to **learn and build independently**.  
+It reflects my **design thinking**, problem-solving under pressure, and eagerness to **learn and build independently**.
+
+**Live Demo:** [Click here to view the website](https://keshu-22.github.io/krishi-sahayak/)
 
 ---
 > *Created with passion by Keshav Sharma during my first semester hackathon.*  
+
